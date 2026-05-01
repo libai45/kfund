@@ -1,0 +1,38 @@
+name: Build IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build with xcodebuild
+      run: |
+        xcodebuild -project kfd.xcodeproj \
+          -scheme kfd \
+          -sdk iphoneos \
+          -configuration Release \
+          -derivedDataPath ./build \
+          CODE_SIGNING_ALLOWED=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGN_IDENTITY="" \
+          clean build
+
+    - name: Create IPA
+      run: |
+        mkdir -p Payload
+        cp -r build/Build/Products/Release-iphoneos/kfd.app Payload/
+        zip -r kfd.ipa Payload
+        rm -rf Payload
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: kfd-ipa
+        path: kfd.ipa
