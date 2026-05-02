@@ -22,7 +22,7 @@ jobs:
           CODE_SIGNING_ALLOWED=NO \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGN_IDENTITY="" \
-          clean build
+          clean build 2>&1 | tee build.log
 
     - name: Create IPA
       run: |
@@ -33,6 +33,14 @@ jobs:
 
     - name: Upload IPA
       uses: actions/upload-artifact@v4
+      if: always()
       with:
         name: kfd-ipa
         path: kfd.ipa
+
+    - name: Upload Build Log
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: build-log
+        path: build.log
