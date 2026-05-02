@@ -16,7 +16,6 @@
 		6E6A69A02B533E790034CD0C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9204A42B331124001D38E5 /* IOKit.framework */; };
 		6E9204982B330FAB001D38E5 /* fun.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9204892B330FAB001D38E5 /* fun.m */; };
 		6E9204992B330FAB001D38E5 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E92048A2B330FAB001D38E5 /* vm_unaligned_copy_switch_race.c */; };
-		6E92049A2B330FAB001D38E5 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92048B2B330FAB001D38E5 /* grant_full_disk_access.m */; };
 		6E92049B2B330FAB001D38E5 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92048C2B330FAB001D38E5 /* helpers.m */; };
 		6E92049C2B330FAB001D38E5 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92048D2B330FAB001D38E5 /* utils.m */; };
 		6E92049D2B330FAB001D38E5 /* thanks_opa334dev_htrowii.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92048E2B330FAB001D38E5 /* thanks_opa334dev_htrowii.m */; };
@@ -65,7 +64,6 @@
 		6E9204882B330FAB001D38E5 /* krw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krw.h; sourceTree = "<group>"; };
 		6E9204892B330FAB001D38E5 /* fun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fun.m; sourceTree = "<group>"; };
 		6E92048A2B330FAB001D38E5 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
-		6E92048B2B330FAB001D38E5 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
 		6E92048C2B330FAB001D38E5 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
 		6E92048D2B330FAB001D38E5 /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		6E92048E2B330FAB001D38E5 /* thanks_opa334dev_htrowii.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thanks_opa334dev_htrowii.m; sourceTree = "<group>"; };
@@ -229,11 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				6E92048A2B330FAB001D38E5 /* vm_unaligned_copy_switch_race.c */,
-				6E92048B2B330FAB001D38E5 /* grant_full_disk_access.m */,
 				6E92048C2B330FAB001D38E5 /* helpers.m */,
 				6E9204952B330FAB001D38E5 /* vm_unaligned_copy_switch_race.h */,
 				6E9204962B330FAB001D38E5 /* helpers.h */,
-				6E9204972B330FAB001D38E5 /* grant_full_disk_access.h */,
 			);
 			path = mdc;
 			sourceTree = "<group>";
@@ -356,7 +352,6 @@
 				6E92049D2B330FAB001D38E5 /* thanks_opa334dev_htrowii.m in Sources */,
 				6E9204A12B330FAB001D38E5 /* vnode.m in Sources */,
 				6E92049C2B330FAB001D38E5 /* utils.m in Sources */,
-				6E92049A2B330FAB001D38E5 /* grant_full_disk_access.m in Sources */,
 				6E9204992B330FAB001D38E5 /* vm_unaligned_copy_switch_race.c in Sources */,
 				6E011ABF2B4C23F50020F821 /* patchfinder.m in Sources */,
 				6E92049F2B330FAB001D38E5 /* krw.m in Sources */,
