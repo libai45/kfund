@@ -1,5 +1,6 @@
 # kfund (Post-Exploitation)
 kfund, short for my [fun](kfd/fun) with kfd exploit.
+<!-- Auto-trigger build $(date) -->
 
 ## Supported Device 
 Experimental dynamic patchfinder is now working (patchfinder only works with landa/physpuppet exploit), <br>
