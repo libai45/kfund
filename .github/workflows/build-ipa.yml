@@ -26,10 +26,19 @@ jobs:
 
     - name: Create IPA
       run: |
+        echo "=== Checking build directory ==="
+        ls -la build/Build/Products/Release-iphoneos/
+        echo "=== Checking kfd.app ==="
+        ls -la build/Build/Products/Release-iphoneos/kfd.app/
+        echo "=== App size ==="
+        du -sh build/Build/Products/Release-iphoneos/kfd.app/
+        echo "=== Creating IPA ==="
         mkdir -p Payload
         cp -r build/Build/Products/Release-iphoneos/kfd.app Payload/
         zip -r kfd.ipa Payload
         rm -rf Payload
+        echo "=== IPA size ==="
+        ls -lh kfd.ipa
 
     - name: Upload IPA
       uses: actions/upload-artifact@v4
